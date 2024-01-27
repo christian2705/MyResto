@@ -1,5 +1,7 @@
 'use strict';
 
+const cuisines = require('../data/cuisines.json')
+
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up (queryInterface, Sequelize) {
@@ -12,6 +14,13 @@ module.exports = {
      *   isBetaMember: false
      * }], {});
     */
+
+    cuisines.map((el) => {
+      el.createdAt = el.updatedAt = new Date()
+      return el
+    })
+
+    queryInterface.bulkInsert(`Cuisines`,cuisines)
   },
 
   async down (queryInterface, Sequelize) {
@@ -21,5 +30,7 @@ module.exports = {
      * Example:
      * await queryInterface.bulkDelete('People', null, {});
      */
+
+    await queryInterface.bulkDelete(`Cuisines`,cuisines)
   }
 };
