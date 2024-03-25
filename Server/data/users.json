@@ -1,0 +1,19 @@
+
+[
+    {
+        "username" : "Alwa",
+        "email" : "alwa123@mail.com",
+        "password" : "alwa123",
+        "role" : "Admin",
+        "phoneNumber" : "0812345678",
+        "address" : "Jl.Ikan"
+    },
+    {
+        "username" : "Vinny",
+        "email" : "vinny123@mail.com",
+        "password" : "vinny123",
+        "role" : "Admin",
+        "phoneNumber" : "08123456777",
+        "address" : "Jl.Ayam"
+    }
+]
